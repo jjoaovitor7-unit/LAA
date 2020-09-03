@@ -1,19 +1,23 @@
-def insertionSort(vet):
-    
-    # laço de repetição para i em um alcance
-    for i in range(len(vet)):
-        j = i # j = i para percorrer os elementos anteriores ao vetor
-        aux = vet[i] # o auxiliar para pegar o elemento "atual" do vetor
+def insertionSort(arr):
+    '''Insertion Sort'''
 
-    while j > 0 and (vet[j-1] > aux):
-        """enquanto j > 0, ou seja, enquanto j for positivo
-           e vet[j-1] maior que aux, ou seja, maior que o elemento atual,
-           faça
-        """
+    # laço de repetição, para i in range de 1 ao tamanho do array
+    for i in range(1, len(arr)):
+        aux = arr[i] # aux recebe o valor atual do array
+        j = i-1 # p/ fazer o laço de repetição
+                # para os elementos anteriores
 
-        vet [j] = vet[j-1] # substitui o valor atual pelo anterior se condições satisfeitas
-        j -= 1 # e decrementa
+        while j >= 0 and arr[j] > aux:
+            """enquanto j for positivo (maior ou igual a 0)
+                e o elemento atual for maior que o aux
+                faça
+            """
 
-    vet[j] = aux # substitui o valor atual se condições satisfeitas, ex. 25 é menor que 56.
+            arr[j + 1] = arr[j] # o elemento atual substitui o próximo elemento
+                                # caso seja maior que o aux
 
-    return vet # retorna o vetor
+            j -= 1 # decrementa j para ir pegando os elementos anteriores
+
+        arr[j + 1] = aux # caso seja menor o próximo elemento é o aux
+
+    return arr
