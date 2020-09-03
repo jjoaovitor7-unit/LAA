@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+#-*- coding: utf-8 -*-
 
 import printArr as p
 import insertionSort as iS
 
 # declaração do array
-n = [56, 25, 32, 11, 10]
+n = [9, 10, 11, 24, 1,
+     2, 56, 32, 0, 90]
 
 # printar o array desordenado
 print("Array desordenado:")
