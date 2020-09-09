@@ -1,7 +1,7 @@
-def printArr(n):
+def printArr(arr):
     '''Printar o array.'''
 
-    myit = iter(n)
-    for i in range(len(n)):
+    myit = iter(arr)
+    for i in range(len(arr)):
         print(next(myit), end=" ")
     print()
